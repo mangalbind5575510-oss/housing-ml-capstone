@@ -6,9 +6,10 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY common/ ./common/
+COPY training/ ./training/
 COPY app/ ./app/
-COPY models/ ./models/
-COPY output/metadata.json ./output/metadata.json
+
+RUN python training/generate_dataset.py && python training/train_pipeline.py
 
 EXPOSE 5000
 
