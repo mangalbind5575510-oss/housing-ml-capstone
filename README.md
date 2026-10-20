@@ -8,7 +8,7 @@ pip install -r requirements.txt
 python training/train_pipeline.py
 python app/main.py
 
-Visit http://127.0.0.1:5000/
+Visit https://housing-ml-capstone.onrender.com
 
 ## Endpoints
 - GET /health
